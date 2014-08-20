@@ -6,7 +6,6 @@ import (
 	"time"
 
 	"github.com/dynport/dgtk/pubsub"
-	"github.com/dynport/gossh"
 )
 
 var pubSub = []*pubsub.PubSub{}
@@ -61,8 +60,6 @@ type Message struct {
 	StartedAt    time.Time     // When was the message created.
 	Duration     time.Duration // How long did the action take (delta from message creation and publishing).
 	TotalRuntime time.Duration // Timeframe of the action (might be larger than the message's).
-
-	SshResult *gossh.Result // Result of an ssh call.
 
 	Stream string // Stream a line appeared on.
 	Line   string // Line that appeared on a stream.
