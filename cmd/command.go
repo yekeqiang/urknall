@@ -12,6 +12,10 @@ type Logger interface {
 	Logging() string
 }
 
+type StdinConsumer interface {
+	Input() io.ReadCloser
+}
+
 // Interface that allows for rendering template content into a structure. Implement this interface for commands that
 // should have the ability for templating. For example the ShellCommand provided by `urknall init` implements this,
 // allowing for substitution of a package's values in the command.
