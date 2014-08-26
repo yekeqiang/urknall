@@ -2,6 +2,7 @@ package urknall
 
 import (
 	"testing"
+
 	. "github.com/smartystreets/goconvey/convey"
 )
 
@@ -31,10 +32,5 @@ func TestUtils(t *testing.T) {
 			So(e, ShouldBeNil)
 			So(checksum, ShouldEqual, "default checksum")
 		})
-	})
-
-	Convey("taskNameOfCommand", t, func() {
-		So(taskNameOfCommand(""), ShouldEqual, "")
-		So(taskNameOfCommand(c), ShouldEqual, "taskname")
 	})
 }
